@@ -18,7 +18,7 @@ import java.text.SimpleDateFormat
 import java.util.Locale
 
 object Utils {
-    const val BASE_URL = "http://192.168.100.50:3000"
+    const val BASE_URL = "http://192.168.43.107:3000"
     const val IS_DEBUG = true
     const val APPLICATION_ID = 1
     const val NO_HP = ""

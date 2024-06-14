@@ -69,7 +69,7 @@ class EnterFragment : Fragment() {
                 }
 
                 if (username.isNotEmpty() && password.isNotEmpty()) {
-                    alertDialogLogin()
+                    loginUser()
                 } else {
                     Snackbar.make(requireView(), "Data harus diisi!", Snackbar.LENGTH_SHORT)
                         .show()
