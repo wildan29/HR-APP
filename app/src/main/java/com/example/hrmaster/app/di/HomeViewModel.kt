@@ -11,6 +11,7 @@ import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
@@ -25,10 +26,10 @@ class HomeViewModel @Inject constructor(private val mainRepo: MainRepo, private 
         get() = _getUser.asStateFlow()
 
     // create shared flow for handling message
-    private val _message = MutableSharedFlow<String>()
+    private val _message = MutableStateFlow<String>("")
 
     val message: SharedFlow<String>
-        get() = _message
+        get() = _message.asSharedFlow()
 
     private val _isLaunch = MutableStateFlow(false)
 

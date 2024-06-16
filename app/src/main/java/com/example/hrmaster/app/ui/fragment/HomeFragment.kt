@@ -22,6 +22,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import koleton.api.hideSkeleton
 import koleton.api.loadSkeleton
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import java.util.Calendar
 
@@ -85,7 +86,7 @@ class HomeFragment : Fragment() {
                         viewModelHome.getUser.collect {
                             when (it.status) {
                                 Status.ERROR -> {
-                                    viewModelHome.message.collect { msg ->
+                                    viewModelHome.message.collectLatest { msg ->
                                         Snackbar.make(requireView(), msg, Snackbar.LENGTH_SHORT)
                                             .show()
                                     }
