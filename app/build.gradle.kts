@@ -134,4 +134,7 @@ dependencies {
 
     // table view
     implementation("com.cleveroad:adaptivetablelayout:1.2.1")
+
+    // skeleton
+    implementation(libs.koleton)
 }

@@ -31,4 +31,22 @@
         app:defaultNavHost="true"
         app:navGraph="@navigation/dashboard_graph" />
 
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/materialDivider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/bnv_admin" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_fab"
+        android:backgroundTint="@color/md_theme_primaryContainer"
+        app:srcCompat = "@drawable/add_24dp_fill0_wght400_grad0_opsz24"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="add employee"
+        app:layout_constraintBottom_toTopOf="@+id/bnv_admin"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

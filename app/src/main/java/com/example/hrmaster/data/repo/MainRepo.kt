@@ -9,4 +9,6 @@ class MainRepo @Inject constructor(private val apiHelper: ApiHelper) {
     suspend fun userRegiser(request : UserRegisterRequest) = apiHelper.userRegister(request)
 
     suspend fun login(request: LoginRequest) = apiHelper.login(request)
+
+    suspend fun getUser(token : String) = apiHelper.getUser(token)
 }

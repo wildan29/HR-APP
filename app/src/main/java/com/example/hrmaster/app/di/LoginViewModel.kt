@@ -4,9 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.hrmaster.data.di.LoginSession
 import com.example.hrmaster.data.models.request.LoginRequest
-import com.example.hrmaster.data.models.request.UserRegisterRequest
 import com.example.hrmaster.data.models.response.LoginResponse
-import com.example.hrmaster.data.models.response.UserRegisterResponse
 import com.example.hrmaster.data.repo.MainRepo
 import com.example.hrmaster.domain.models.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel

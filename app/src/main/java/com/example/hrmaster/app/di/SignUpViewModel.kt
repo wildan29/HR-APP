@@ -1,6 +1,5 @@
 package com.example.hrmaster.app.di
 
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.hrmaster.data.models.request.UserRegisterRequest
@@ -16,7 +15,7 @@ import org.json.JSONObject
 import javax.inject.Inject
 
 @HiltViewModel
-class SignUpViewModel @Inject constructor(private val mainRepo: MainRepo)  : ViewModel(){
+class SignUpViewModel @Inject constructor(private val mainRepo: MainRepo) : ViewModel() {
     private val _userSignUp =
         MutableStateFlow<Resource<UserRegisterResponse>>(Resource.loading(null))
     val userSignUp: StateFlow<Resource<UserRegisterResponse>>
@@ -32,7 +31,7 @@ class SignUpViewModel @Inject constructor(private val mainRepo: MainRepo)  : Vie
         _userSignUp.value = Resource.loading(null)
 
         try {
-            mainRepo.userRegiser( request).let {
+            mainRepo.userRegiser(request).let {
                 if (it.isSuccessful) {
                     _userSignUp.value = Resource.success(it.body())
                 } else {
